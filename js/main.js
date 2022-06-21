@@ -28,11 +28,23 @@ if (contador==0) {
     document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("ftperfil").style.display = "none";
+    document.getElementById("habitaciones").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
+    document.getElementById("lugares").style.display = "none";
     conta=0;
     contador=1;
 }
 else{
-
+    document.getElementById("informacion").style.display = "none";
+    document.getElementById("portafolio").style.display = "block";
+    document.getElementById("back").style.display = "block";
+    document.getElementById("side").style.display = "none";
+    document.getElementById("ftperfil").style.display = "none";
+    document.getElementById("habitaciones").style.display = "none";
+    document.getElementById("screen4").style.display = "none";
+    document.getElementById("lugares").style.display = "none";
+    conta=0;
+    contador=0;
 }
 }
 
