@@ -373,7 +373,7 @@ document.querySelector('.side')
                   ${cliente}%0A
                   *Ubicacion*%0A
                   ${cantidad}%0A
-                  *Busco un*%0A
+                  *Busco*%0A
                   ${modulos}%0A`;
           
             if (cliente === "" || cantidad === "" ) {
@@ -389,8 +389,51 @@ document.querySelector('.side')
           });
           
     
-    
-        
+    //ALERTAS>
+          function save(){
+            let url = `https://drive.google.com/u/0/uc?id=1ZNdbUhFsBIgWlGyfdwKgt5io3ty62JwE&export=download`;
+            window.open(url); 
+           }
+          
+          function ftuser() {
+              Swal.fire({
+                  title: 'Ximena Román',
+                  text: 'Asesora Bienes y Raíces.',
+                  imageUrl: 'img/ximena.jpg',
+                  imageWidth: 200,
+                  confirmButtonText: 'Añadir a Contactos',
+                  showCloseButton: 'true',
+                  showCancelButton: true,
+            
+              
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    save();
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'success',
+                      title: 'Descarga Correcta',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                  }
+                })
+          
+           
+          };
+          
+          
+          
+          function msj2() {
+            Swal.fire({
+              icon: 'info',
+              title: 'Traducir a Ingles',
+              text: 'Opción Disponible Próximamente',
+              footer: 'Tarjeta De Presentación'
+            });
+          
+           
+          }
 
 
 

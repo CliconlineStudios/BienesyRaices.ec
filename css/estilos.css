@@ -290,10 +290,20 @@ lottie-player {
 }
 
 @media screen  and  (min-width: 730px){
-	.fotoperfil .ftperfil {
-		width: 20%;
-	    top: 223px;
-		left: 40%;
+	.fotoperfil  {
+		width: 30%;
+	    top: 200px;
+		left: 32%;
+	
+	  }
+  }
+
+  @media screen  and  (min-width: 730px){
+	.ftperfil {
+	
+	    top: 110px;
+		left: 46%;
+		position: relative;
 	  }
   }
 
@@ -873,6 +883,15 @@ footer .rango {
 .screen4 {
 	text-align: center;
 	display: none;
+}
+
+.formulario .closef{
+	color: #080077;
+	cursor: pointer;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	
 }
 
   .formulario {
