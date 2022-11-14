@@ -407,8 +407,8 @@ lottie-player {
 
 
 
-/* ----- ----- habitaciones ----- ----- */
-.habitaciones {
+/* ----- ----- departamentos ----- ----- */
+.departamentos {
 	text-align: center;
 	padding: 0px 10px;
 	display: none;	
@@ -419,11 +419,11 @@ lottie-player {
     
 }
 
-.habitaciones .siderh{
+.departamentos .siderh{
 	position: relative;
 }
 
-.habitaciones .imgc {
+.departamentos .imgc {
 	width: 100%;
 	vertical-align: top;
 	border-radius: 10px;
@@ -433,13 +433,13 @@ lottie-player {
 }
 
 @media screen  and  (min-width: 1200px){
-	.habitaciones .imgc{ 
+	.departamentos .imgc{ 
 		width: 50%;
 	  }
   }
 
 
-.habitaciones p {
+.departamentos p {
 	font-size: 16px;
 	padding: 2px 2px;
 }
@@ -491,14 +491,14 @@ lottie-player {
 }
 
 
-.habitaciones .oro {
+.departamentos .oro {
 	border-radius: 10px;
 	overflow: hidden;
 	padding: 10px 5px;
 
 	}
 	
-.habitaciones .platino {
+.departamentos .platino {
 		border-radius: 10px;
 		overflow: hidden;
 		padding: 10px 5px;
@@ -506,7 +506,7 @@ lottie-player {
 		
 	
 		}
-.habitaciones .diamante {
+.departamentos .diamante {
 			border-radius: 10px;
 			overflow: hidden;
 			padding: 10px 5px;
@@ -757,11 +757,10 @@ footer .rango {
 }
 
 @media screen  and  (min-width: 1200px){
-	.descarga, .pago { 
-	  display: none;
+	.back { 
+	  display: block;
 	  }
   }
-
 @media screen  and  (min-width: 1400px){
 	.sidebar { 
 	  left: 27%;

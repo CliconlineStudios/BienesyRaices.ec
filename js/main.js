@@ -1,118 +1,116 @@
 
+let ids = '';
+
+function ids1 () {
+    ids = 'servicios.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'servicios.html.html';
+
+};
+
+function ids2 () {
+    ids = 'carrito.html';
+    history.pushState(`Selected: ${ids}`, `./${ids}`);
+    pages = 'carrito.html';
+
+};
+
+
+
+window.addEventListener('popstate', e => {
+    backweb();
+    
+});
+
+function backarriba(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });       
+};
+
+function backweb() {
+   
+    if (contador==1) {
+        document.getElementById("informacion").style.display = "block";
+        document.getElementById("ftperfil").style.display = "block";
+        document.getElementById("portafolio").style.display = "none";
+        document.getElementById("back").style.display = "none";
+        document.getElementById("side").style.display = "none";
+        conta=0;
+        contador=0;
+        backarriba();
+        history.back();
+
+    }
+    else if(contador==2){
+        document.getElementById("portafolio").style.display = "block";
+        document.getElementById("departamentos").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
+        contador=1;
+        backarriba();
+        ids1();
+
+    }
+    else{
+            history.back();
+        
+    }
+
+    } 
+
+
 function inicio() {
     document.getElementById("informacion").style.display = "block";	
     document.getElementById("portafolio").style.display = "none";
-    document.getElementById("back").style.display = "none";
-    document.getElementById("habitaciones").style.display = "none";
+    document.getElementById("departamentos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
     document.getElementById("side").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
     document.getElementById("ftperfil").style.display = "block";
     conta=0;
     contador=0;
 }
 
 
-
-
-var btn = document.getElementById("inicio"),
-    informacion = document.getElementById("infomacion"),
-    contador=0;
-
-
 function servicios() {
-
-if (contador==0) {
     document.getElementById("informacion").style.display = "none";
     document.getElementById("portafolio").style.display = "block";
-    document.getElementById("back").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("ftperfil").style.display = "none";
-    document.getElementById("habitaciones").style.display = "none";
+    document.getElementById("departamentos").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
     conta=0;
     contador=1;
-}
-else{
-    document.getElementById("informacion").style.display = "none";
-    document.getElementById("portafolio").style.display = "block";
-    document.getElementById("back").style.display = "block";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("ftperfil").style.display = "none";
-    document.getElementById("habitaciones").style.display = "none";
-    document.getElementById("screen4").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
-    conta=0;
-    contador=0;
-}
+    ids1();
+
 }
 
-function categorias() {
+function proyectos() {
     document.getElementById("informacion").style.display = "none";	
     document.getElementById("portafolio").style.display = "none";
-    document.getElementById("habitaciones").style.display = "block";
-    document.getElementById("back").style.display = "block";
+    document.getElementById("departamentos").style.display = "block";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
     document.getElementById("screen4").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
     document.getElementById("ftperfil").style.display = "none";
     conta=0;
     contador=2;
+    ids1();
     
     
 }
 
-function restaurante() {
-    document.getElementById("portafolio").style.display = "none";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
-    document.getElementById("habitaciones").style.display = "none";
-    document.getElementById("screen4").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
-    document.getElementById("ftperfil").style.display = "none";
-    conta=0;
-    contador=2;
-    
-    
-}
-
-function planes() {
+function contactanos() {
     document.getElementById("screen4").style.display = "block";
     document.getElementById("portafolio").style.display = "none";
     document.getElementById("side").style.display = "none";
     document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
-    document.getElementById("habitaciones").style.display = "none";
-    document.getElementById("lugares").style.display = "none";
+    document.getElementById("departamentos").style.display = "none";
     document.getElementById("ftperfil").style.display = "none";
     conta=0;
-    contador=3; 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });     
-        
-}
-
-
-function lugares() {
-    document.getElementById("lugares").style.display = "block";
-    document.getElementById("screen4").style.display = "none";
-    document.getElementById("portafolio").style.display = "none";
-    document.getElementById("side").style.display = "none";
-    document.getElementById("informacion").style.display = "none";
-    document.getElementById("back").style.display = "block";
-    document.getElementById("habitaciones").style.display = "none";
-    document.getElementById("ftperfil").style.display = "none";
-    conta=0;
-    contador=3; 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        });     
+    contador=2; 
+    backarriba();
+    ids1();    
         
 }
 
@@ -128,35 +126,33 @@ document.querySelector('.slider')
 //   boton atras
 
 function back() {
-
     if (contador==1) {
         document.getElementById("informacion").style.display = "block";
         document.getElementById("ftperfil").style.display = "block";
         document.getElementById("portafolio").style.display = "none";
-        document.getElementById("back").style.display = "none";
         document.getElementById("side").style.display = "none";
         conta=0;
         contador=0;
+        backarriba();
+        history.back();
+
+    }
+    else if(contador==2){
+        document.getElementById("portafolio").style.display = "block";
+        document.getElementById("departamentos").style.display = "none";
+        document.getElementById("screen4").style.display = "none";
+        contador=1;
+        backarriba();
+        ids1();
 
     }
     else{
-        document.getElementById("portafolio").style.display = "block";
-        document.getElementById("habitaciones").style.display = "none";
-        document.getElementById("lugares").style.display = "none";
-        document.getElementById("screen4").style.display = "none";
-        contador=1;
-
-    }
-    
-    
+            history.back();
+        
     }
 
 
-       //    menu laterl 
-
-       var btns = document.getElementById("inicio"),
-       informacion = document.getElementById("infomacion"),
-       conta=0;
+    } 
    
        function sidebar()  {
    
@@ -183,84 +179,19 @@ function back() {
                conta=0;
                });
    
-     // slider3
     
-     const slider3 = document.querySelector("#slider3");
-     let sliderSection3 = document.querySelectorAll(".slider__section3");
-     let sliderSectionlast3 = sliderSection3[sliderSection3.length -1];
-     
-     const btnLeft3 = document.querySelector("#btn-left3");
-     const btnRight3 = document.querySelector("#btn-rigth3");
-     
-     slider3.insertAdjacentElement('afterbegin', sliderSectionlast3);
-     
-     function next3 (){
-         let sliderSectionFirst3 = document.querySelectorAll(".slider__section3")[0];
-         slider3.style.marginLeft = "-200%";
-         slider3.style.transition = "all 0.5s";
-         setTimeout(function(){
-             slider3.style.transition = "none";
-             slider3.insertAdjacentElement('beforeend', sliderSectionFirst3);
-             slider3.style.marginLeft = "-100%";
-         }, 500);  
-     }
-     
-     function Prev3 (){
-         let sliderSection3 = document.querySelectorAll(".slider__section3");
-         let sliderSectionLast3 = sliderSection3[sliderSection3.length -1];
-         slider3.style.marginLeft = "0";
-         slider3.style.transition = "all 0.5s";
-         setTimeout(function(){
-             slider3.style.transition = "none";
-             slider3.insertAdjacentElement('afterbegin', sliderSectionLast3);
-             slider3.style.marginLeft = "-100%";
-         }, 500);  
-     }
-     
-     btnRight3.addEventListener('click', function(){
-         next3();
-     });
-     
-     btnLeft3.addEventListener('click', function(){
-         Prev3();
-     });
-     
-     setInterval(function(){
-         next3();
-     },4000);  
-
 
 
    //    menu laterl 
 
+   var btn = document.getElementById("inicio"),
+    informacion = document.getElementById("infomacion"),
+    contador=0;
+
+
     var btns = document.getElementById("inicio"),
     informacion = document.getElementById("infomacion"),
     conta=0;
-
-    function sidebar()  {
-
-        if (conta==0) {
-            document.getElementById("side").style.display = "block";
-            conta=1;
-        }
-        else{
-            document.getElementById("side").style.display = "none";
-            conta=0;
-        }
-        }
-
-        function cerrarside() {
-            document.getElementById("side").style.display = "none";
-            conta=0;
-            
-        }
-
-        // llevar cerrar side automatico
-
-        document.querySelector('.tarjeta').addEventListener('click',()=>{
-            document.getElementById("side").style.display = "none";
-            conta=0;
-            });
 
   // slider
  
@@ -435,6 +366,30 @@ document.querySelector('.side')
            
           }
 
+
+          // share tarjeta
+
+const shareData2 = {
+    title: 'Ximena Román',
+    text: 'Enviado desde Cliconline App. Tarjeta de Presentación Digital Ximena Román',
+    url: 'https://bienesyraicesec.blogspot.com',
+    }
+  
+  
+   // Share must be triggered by "user activation"
+     
+   var urltarjeta = 'https://api.whatsapp.com//send?text=Enviado%20desde%20la%20App%20de%20Cliconline%20Ver%20Tarjeta%20Digital%20aqui%20https://bienesyraicesec.blogspot.com'
+    
+   function sharetarjeta(){
+   if (navigator.share) {
+       navigator
+      .share(shareData2)
+      .then(() => console.log('correcto'))
+      .catch(error => console.log ('error sharing',error) );
+   }else {
+    window.open(urltarjeta); 
+   }
+   } 
 
 
 
